@@ -7,6 +7,7 @@ plugins {
 android {
     namespace = "com.example.privacy_ads_consumer"
     compileSdk = 36
+    compileSdkExtension = 19
 
     privacySandbox {
         enable = true
@@ -44,8 +45,8 @@ android {
 }
 
 dependencies {
-    implementation("androidx.privacysandbox.ads:ads-adservices:1.1.0-beta12")
-
+    implementation(libs.androidx.privacysandbox.ads)
+    implementation(libs.androidx.privacysandbox.ads.java) 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -54,7 +55,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.sdkruntime.provider)
+    implementation(libs.androidx.sdkruntime.core)
+    implementation(libs.androidx.sdkruntime.client)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

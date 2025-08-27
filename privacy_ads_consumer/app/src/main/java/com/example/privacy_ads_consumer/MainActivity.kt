@@ -14,7 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.coroutineScope
-import androidx.privacysandbox.sdkruntime.provider.controller.SdkSandboxControllerCompat
+import androidx.privacysandbox.sdkruntime.client.SdkSandboxManagerCompat
 import com.example.privacy_ads_consumer.ui.theme.Privacy_ads_consumerTheme
 import kotlinx.coroutines.launch
 
@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                         onClick = {
                             lifecycle.coroutineScope.launch {
                                 Log.e(TAG, "onCreate: Calling SDK")
-                                val remoteSdk = SdkSandboxControllerCompat.from(this@MainActivity).loadSdk(
+                                val remoteSdk = SdkSandboxManagerCompat.from(this@MainActivity).loadSdk(
                                     sdkName = "androidx.privacysandbox.ads.adservices",
                                     params = Bundle.EMPTY
                                 )

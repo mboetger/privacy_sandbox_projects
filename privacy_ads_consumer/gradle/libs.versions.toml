@@ -8,7 +8,10 @@ espressoCore = "3.7.0"
 lifecycleRuntimeKtx = "2.9.2"
 activityCompose = "1.10.1"
 composeBom = "2024.09.00"
-sdkruntimeProvider = "1.0.0-alpha18"
+sdkruntimeCore = "1.0.0-alpha18"
+sdkruntimeClient = "1.0.0-alpha18"
+adServices = "1.1.0-beta12"
+adServicesJava = "1.1.0-beta12"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -25,7 +28,10 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
-androidx-sdkruntime-provider = { group = "androidx.privacysandbox.sdkruntime", name = "sdkruntime-provider", version.ref = "sdkruntimeProvider" }
+androidx-sdkruntime-core= { group = "androidx.privacysandbox.sdkruntime", name = "sdkruntime-core", version.ref = "sdkruntimeCore" }
+androidx-sdkruntime-client= { group = "androidx.privacysandbox.sdkruntime", name = "sdkruntime-client", version.ref = "sdkruntimeClient" }
+androidx-privacysandbox-ads = { group = "androidx.privacysandbox.ads", name = "ads-adservices", version.ref = "adServices" }
+androidx-privacysandbox-ads-java = { group = "androidx.privacysandbox.ads", name = "ads-adservices-java", version.ref = "adServicesJava" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
