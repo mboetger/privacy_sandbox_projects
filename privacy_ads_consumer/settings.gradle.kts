@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "privacy_ads_consumer"
 include(":app")
- 
